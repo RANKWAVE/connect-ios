@@ -1,0 +1,15 @@
+#import "AppDelegate.h"
+#######
+#import <Fabric/Fabric.h>
+#import <AWSCognito/AWSCognito.h>
+#import <AWSCore/AWSCore.h>
+#######
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+#start#
+return YES;
+}
+
+@end

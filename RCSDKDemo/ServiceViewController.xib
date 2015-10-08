@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceViewController">
+            <connections>
+                <outlet property="logText" destination="SDs-na-MK1" id="b6a-HA-Tw1"/>
+                <outlet property="name" destination="k9P-Ch-6wy" id="FGh-CT-Pb8"/>
+                <outlet property="profileImage" destination="zMd-aT-shk" id="bia-nS-GU1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_service" translatesAutoresizingMaskIntoConstraints="NO" id="Vxz-Yq-th5">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="eWt-t3-zEn"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRE-vi-XxO">
+                    <rect key="frame" x="8" y="206" width="123" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="123" id="X1e-h2-3Az"/>
+                        <constraint firstAttribute="height" constant="30" id="skg-jB-bd7"/>
+                    </constraints>
+                    <state key="normal" title="Log out"/>
+                    <connections>
+                        <action selector="logout:" destination="-1" eventType="touchUpInside" id="7Dr-3w-77L"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3H-dZ-AnK">
+                    <rect key="frame" x="174" y="206" width="131" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="131" id="MKP-Iy-gVt"/>
+                        <constraint firstAttribute="height" constant="30" id="qbH-tH-0nV"/>
+                    </constraints>
+                    <state key="normal" title="Leave"/>
+                    <connections>
+                        <action selector="leave:" destination="-1" eventType="touchUpInside" id="xNc-B0-3bk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bY-Kx-vrS">
+                    <rect key="frame" x="0.0" y="244" width="139" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="FjR-RW-qUt"/>
+                        <constraint firstAttribute="width" constant="139" id="q2p-Yy-6U0"/>
+                    </constraints>
+                    <state key="normal" title="Push On"/>
+                    <connections>
+                        <action selector="pushOn:" destination="-1" eventType="touchUpInside" id="9jp-cn-WO0"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zMd-aT-shk">
+                    <rect key="frame" x="110" y="30" width="100" height="100"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="XWP-mW-Bqc"/>
+                        <constraint firstAttribute="width" constant="100" id="cHe-fT-bZ5"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9P-Ch-6wy">
+                    <rect key="frame" x="15" y="168" width="290" height="21"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="dae-Bq-zqR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkE-4g-z71">
+                    <rect key="frame" x="173" y="244" width="139" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="139" id="RjG-db-zf0"/>
+                        <constraint firstAttribute="height" constant="30" id="ani-Vo-F6k"/>
+                    </constraints>
+                    <state key="normal" title="Push Off"/>
+                    <connections>
+                        <action selector="pushOff:" destination="-1" eventType="touchUpInside" id="rdH-8l-bhe"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="RANK.CLOUD enable you to find your customers." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SDs-na-MK1">
+                    <rect key="frame" x="15" y="282" width="290" height="183"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                </textView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="k9P-Ch-6wy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="2Qi-1j-NEd"/>
+                <constraint firstItem="jRE-vi-XxO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-90.5" id="3TZ-wW-H9k"/>
+                <constraint firstItem="zMd-aT-shk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="F9q-EO-y6G"/>
+                <constraint firstItem="IkE-4g-z71" firstAttribute="top" secondItem="V3H-dZ-AnK" secondAttribute="bottom" constant="8" id="JBC-hr-HJi"/>
+                <constraint firstItem="V3H-dZ-AnK" firstAttribute="top" secondItem="Vxz-Yq-th5" secondAttribute="bottom" constant="46" id="JUf-LW-M6t"/>
+                <constraint firstItem="IkE-4g-z71" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="82.5" id="SDQ-yo-zmL"/>
+                <constraint firstAttribute="bottom" secondItem="SDs-na-MK1" secondAttribute="bottom" constant="15" id="SM9-0i-kRc"/>
+                <constraint firstItem="9bY-Kx-vrS" firstAttribute="top" secondItem="jRE-vi-XxO" secondAttribute="bottom" constant="8" id="UyO-po-91m"/>
+                <constraint firstItem="jRE-vi-XxO" firstAttribute="top" secondItem="Vxz-Yq-th5" secondAttribute="bottom" constant="46" id="YvF-vt-Mxn"/>
+                <constraint firstAttribute="trailing" secondItem="k9P-Ch-6wy" secondAttribute="trailing" constant="15" id="dCE-WR-ocC"/>
+                <constraint firstItem="Vxz-Yq-th5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dtN-uK-vum"/>
+                <constraint firstAttribute="trailing" secondItem="Vxz-Yq-th5" secondAttribute="trailing" id="f6C-cg-K7a"/>
+                <constraint firstItem="SDs-na-MK1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="h1e-Co-Enm"/>
+                <constraint firstItem="SDs-na-MK1" firstAttribute="top" secondItem="IkE-4g-z71" secondAttribute="bottom" constant="8" id="j06-eT-cft"/>
+                <constraint firstItem="zMd-aT-shk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="jca-Pp-f15"/>
+                <constraint firstAttribute="trailing" secondItem="SDs-na-MK1" secondAttribute="trailing" constant="15" id="pF2-qf-BbU"/>
+                <constraint firstItem="V3H-dZ-AnK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="79.5" id="r6y-wX-Rby"/>
+                <constraint firstItem="9bY-Kx-vrS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-90.5" id="rOJ-j5-Hbl"/>
+                <constraint firstItem="k9P-Ch-6wy" firstAttribute="top" secondItem="Vxz-Yq-th5" secondAttribute="bottom" constant="8" id="ve7-NK-Wit"/>
+                <constraint firstItem="Vxz-Yq-th5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yja-zJ-1um"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="235" y="298"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_service" width="720" height="720"/>
+    </resources>
+</document>
