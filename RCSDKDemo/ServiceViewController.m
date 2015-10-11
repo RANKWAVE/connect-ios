@@ -176,15 +176,14 @@
     ///////////////////////////////////////////////////
     
     [[RCSDK sharedInstance] logout:^(NSString *response, NSError *error) {
-            if(response) {
-                NSLog(@"Calling RANK.CLOUD 'logout' module succeeded. %@", response);
-            }
-            
-            if(error) {
-                NSLog(@"Calling RANK.CLOUD 'logout' module failed. %@", [error localizedDescription]);
-            }
+        if(response) {
+            NSLog(@"Calling RANK.CLOUD 'logout' module succeeded. %@", response);
         }
-    ];
+        
+        if(error) {
+            NSLog(@"Calling RANK.CLOUD 'logout' module failed. %@", [error localizedDescription]);
+        }
+    }];
 
     ///////////////////////////////////////////////////
     
@@ -222,15 +221,14 @@
     ///////////////////////////////////////////////////
 
     [[RCSDK sharedInstance] leave:^(NSString *response, NSError *error) {
-            if(response) {
-                NSLog(@"Calling RANK.CLOUD 'leave' module succeeded. %@", response);
-            }
-            
-            if(error) {
-                NSLog(@"Calling RANK.CLOUD 'leave' module failed. %@", [error localizedDescription]);
-            }
+        if(response) {
+            NSLog(@"Calling RANK.CLOUD 'leave' module succeeded. %@", response);
         }
-    ];
+        
+        if(error) {
+            NSLog(@"Calling RANK.CLOUD 'leave' module failed. %@", [error localizedDescription]);
+        }
+    }];
     
     ///////////////////////////////////////////////////
     
@@ -253,15 +251,14 @@
     ///////////////////////////////////////////////////
     
     [[RCSDK sharedInstance] pushOn:^(NSString *response, NSError *error) {
-            if(response) {
-                NSLog(@"RANK.CLOUD's smart push [ON]. %@", response);
-            }
-            
-            if(error) {
-                NSLog(@"Failed to turn on RANK.CLOUD's smart push. %@", [error localizedDescription]);
-            }
+        if(response) {
+            NSLog(@"RANK.CLOUD's smart push [ON]. %@", response);
         }
-    ];
+        
+        if(error) {
+            NSLog(@"Failed to turn on RANK.CLOUD's smart push. %@", [error localizedDescription]);
+        }
+    }];
     
     ///////////////////////////////////////////////////
     
@@ -280,15 +277,14 @@
     ///////////////////////////////////////////////////
     
     [[RCSDK sharedInstance] pushOff:^(NSString *response, NSError *error) {
-            if(response) {
-                NSLog(@"RANK.CLOUD's smart push [OFF]. %@", response);
-            }
-            
-            if(error) {
-                NSLog(@"Failed to turn off RANK.CLOUD's smart push. %@", [error localizedDescription]);
-            }
+        if(response) {
+            NSLog(@"RANK.CLOUD's smart push [OFF]. %@", response);
         }
-    ];
+        
+        if(error) {
+            NSLog(@"Failed to turn off RANK.CLOUD's smart push. %@", [error localizedDescription]);
+        }
+    }];
     
     ///////////////////////////////////////////////////
     

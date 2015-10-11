@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		97140FFD1BC4E92F00563F60 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97140FFF1BC4E92F00563F60 /* Localizable.strings */; };
+		973DFA921BCABD5F0051D2D5 /* RCSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973DFA911BCABD5F0051D2D5 /* RCSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		973DFA941BCABE570051D2D5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973DFA931BCABE570051D2D5 /* AdSupport.framework */; };
+		973DFA961BCABFC00051D2D5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973DFA951BCABFC00051D2D5 /* CoreTelephony.framework */; };
 		97AD3C5D1BC25B140020289F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD3C5C1BC25B140020289F /* main.m */; };
 		97AD3C601BC25B140020289F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD3C5F1BC25B140020289F /* AppDelegate.m */; };
 		97AD3C681BC25B140020289F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97AD3C671BC25B140020289F /* Assets.xcassets */; };
@@ -18,16 +21,12 @@
 		97AD3C9E1BC279F00020289F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97AD3C9C1BC279F00020289F /* LoginViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		97AD3CA21BC27A000020289F /* ServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD3CA01BC27A000020289F /* ServiceViewController.m */; settings = {ASSET_TAGS = (); }; };
 		97AD3CA31BC27A000020289F /* ServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97AD3CA11BC27A000020289F /* ServiceViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		97AD3CB11BC280900020289F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AD3CB01BC280900020289F /* AdSupport.framework */; };
-		97AD3CB31BC280A60020289F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AD3CB21BC280A60020289F /* CoreTelephony.framework */; };
 		97F1C80C1BC5FEEF00AD2C09 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C8081BC5FEEF00AD2C09 /* Fabric.framework */; settings = {ASSET_TAGS = (); }; };
 		97F1C80D1BC5FEEF00AD2C09 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C8091BC5FEEF00AD2C09 /* TwitterKit.framework */; settings = {ASSET_TAGS = (); }; };
 		97F1C80E1BC5FEEF00AD2C09 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97F1C80A1BC5FEEF00AD2C09 /* TwitterKitResources.bundle */; settings = {ASSET_TAGS = (); }; };
 		97F1C80F1BC5FEEF00AD2C09 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C80B1BC5FEEF00AD2C09 /* TwitterCore.framework */; settings = {ASSET_TAGS = (); }; };
 		97F1C8121BC600BC00AD2C09 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C8101BC600BC00AD2C09 /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
 		97F1C8131BC600BC00AD2C09 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C8111BC600BC00AD2C09 /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
-		97F1C8161BC600C700AD2C09 /* RCSDKCoreKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97F1C8141BC600C700AD2C09 /* RCSDKCoreKit.bundle */; settings = {ASSET_TAGS = (); }; };
-		97F1C8171BC600C700AD2C09 /* RCSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C8151BC600C700AD2C09 /* RCSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +50,9 @@
 		97140FFE1BC4E92F00563F60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		971410001BC4E93A00563F60 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		971410011BC4E94F00563F60 /* ko-KR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ko-KR"; path = "ko-KR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		973DFA911BCABD5F0051D2D5 /* RCSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RCSDKCoreKit.framework; path = RCSDKDemo/RankcloudSDKs/RCSDKCoreKit.framework; sourceTree = "<group>"; };
+		973DFA931BCABE570051D2D5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		973DFA951BCABFC00051D2D5 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		97AD3C581BC25B140020289F /* RCSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97AD3C5C1BC25B140020289F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		97AD3C5E1BC25B140020289F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,16 +73,12 @@
 		97AD3C9F1BC27A000020289F /* ServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceViewController.h; sourceTree = "<group>"; };
 		97AD3CA01BC27A000020289F /* ServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceViewController.m; sourceTree = "<group>"; };
 		97AD3CA11BC27A000020289F /* ServiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceViewController.xib; sourceTree = "<group>"; };
-		97AD3CB01BC280900020289F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		97AD3CB21BC280A60020289F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		97F1C8081BC5FEEF00AD2C09 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		97F1C8091BC5FEEF00AD2C09 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		97F1C80A1BC5FEEF00AD2C09 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		97F1C80B1BC5FEEF00AD2C09 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		97F1C8101BC600BC00AD2C09 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = RCSDKDemo/FacebookSDKs/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		97F1C8111BC600BC00AD2C09 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = RCSDKDemo/FacebookSDKs/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		97F1C8141BC600C700AD2C09 /* RCSDKCoreKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = RCSDKCoreKit.bundle; path = RCSDKDemo/RankcloudSDKs/RCSDKCoreKit.bundle; sourceTree = "<group>"; };
-		97F1C8151BC600C700AD2C09 /* RCSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RCSDKCoreKit.framework; path = RCSDKDemo/RankcloudSDKs/RCSDKCoreKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +86,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97AD3CB31BC280A60020289F /* CoreTelephony.framework in Frameworks */,
+				973DFA961BCABFC00051D2D5 /* CoreTelephony.framework in Frameworks */,
+				973DFA941BCABE570051D2D5 /* AdSupport.framework in Frameworks */,
 				97F1C8121BC600BC00AD2C09 /* FBSDKCoreKit.framework in Frameworks */,
-				97F1C8171BC600C700AD2C09 /* RCSDKCoreKit.framework in Frameworks */,
-				97AD3CB11BC280900020289F /* AdSupport.framework in Frameworks */,
+				973DFA921BCABD5F0051D2D5 /* RCSDKCoreKit.framework in Frameworks */,
 				97F1C80F1BC5FEEF00AD2C09 /* TwitterCore.framework in Frameworks */,
 				97F1C8131BC600BC00AD2C09 /* FBSDKLoginKit.framework in Frameworks */,
 				97F1C80C1BC5FEEF00AD2C09 /* Fabric.framework in Frameworks */,
@@ -119,16 +117,15 @@
 		97AD3C4F1BC25B140020289F = {
 			isa = PBXGroup;
 			children = (
-				97F1C8141BC600C700AD2C09 /* RCSDKCoreKit.bundle */,
-				97F1C8151BC600C700AD2C09 /* RCSDKCoreKit.framework */,
+				973DFA951BCABFC00051D2D5 /* CoreTelephony.framework */,
+				973DFA931BCABE570051D2D5 /* AdSupport.framework */,
+				973DFA911BCABD5F0051D2D5 /* RCSDKCoreKit.framework */,
 				97F1C8101BC600BC00AD2C09 /* FBSDKCoreKit.framework */,
 				97F1C8111BC600BC00AD2C09 /* FBSDKLoginKit.framework */,
 				97F1C8081BC5FEEF00AD2C09 /* Fabric.framework */,
 				97F1C8091BC5FEEF00AD2C09 /* TwitterKit.framework */,
 				97F1C80A1BC5FEEF00AD2C09 /* TwitterKitResources.bundle */,
 				97F1C80B1BC5FEEF00AD2C09 /* TwitterCore.framework */,
-				97AD3CB21BC280A60020289F /* CoreTelephony.framework */,
-				97AD3CB01BC280900020289F /* AdSupport.framework */,
 				97AD3C5A1BC25B140020289F /* RCSDKDemo */,
 				97AD3C741BC25B140020289F /* RCSDKDemoTests */,
 				97AD3C7F1BC25B140020289F /* RCSDKDemoUITests */,
@@ -305,7 +302,6 @@
 				97AD3CA31BC27A000020289F /* ServiceViewController.xib in Resources */,
 				97AD3C9E1BC279F00020289F /* LoginViewController.xib in Resources */,
 				97F1C80E1BC5FEEF00AD2C09 /* TwitterKitResources.bundle in Resources */,
-				97F1C8161BC600C700AD2C09 /* RCSDKCoreKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

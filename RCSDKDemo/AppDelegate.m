@@ -71,8 +71,7 @@
                                     didFinishLaunchingWithOptions:launchOptions];
 }
 
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
-{
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     ///////////////////////////////////////////////////
     // FOR RC SDK
     ///////////////////////////////////////////////////
