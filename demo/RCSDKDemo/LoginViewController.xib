@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Xx1-uf-sCz">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <animations/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgP-2a-5xa">
+                    <rect key="frame" x="26" y="339" width="270" height="46"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="gds-1a-PDI"/>
+                        <constraint firstAttribute="width" constant="270" id="mcu-uk-OMm"/>
+                    </constraints>
+                    <state key="normal" title="Facebook" image="btn_facebook"/>
+                    <state key="highlighted" image="btn_facebook_on"/>
+                    <connections>
+                        <action selector="loginToFacebook:" destination="-1" eventType="touchUpInside" id="910-9G-nny"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="AGw-jc-rBv">
+                    <rect key="frame" x="71" y="144" width="180" height="180"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="AzE-hh-Eik"/>
+                        <constraint firstAttribute="height" constant="180" id="MIY-V8-Sfy"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSp-by-PhD">
+                    <rect key="frame" x="26" y="391" width="270" height="46"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="1SB-6F-jIW"/>
+                        <constraint firstAttribute="width" constant="270" id="Duq-iW-hve"/>
+                    </constraints>
+                    <state key="normal" title="Twitter" image="btn_twitter"/>
+                    <state key="highlighted" image="btn_twitter_on"/>
+                    <connections>
+                        <action selector="loginToTwitter:" destination="-1" eventType="touchUpInside" id="35f-p6-95L"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Xx1-uf-sCz" secondAttribute="trailing" id="ERS-Xo-4qI"/>
+                <constraint firstItem="TSp-by-PhD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="1" id="Gqn-AT-HUl"/>
+                <constraint firstItem="AGw-jc-rBv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="1" id="I7Y-ZE-BXJ"/>
+                <constraint firstItem="Xx1-uf-sCz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QSd-3E-cCx"/>
+                <constraint firstItem="AGw-jc-rBv" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-6" id="Rpt-xA-Wsv"/>
+                <constraint firstItem="TSp-by-PhD" firstAttribute="top" secondItem="pgP-2a-5xa" secondAttribute="bottom" constant="6" id="Vjy-SB-mQs"/>
+                <constraint firstAttribute="bottom" secondItem="Xx1-uf-sCz" secondAttribute="bottom" id="ax5-Gt-gO6"/>
+                <constraint firstItem="Xx1-uf-sCz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qzC-El-A9N"/>
+                <constraint firstItem="pgP-2a-5xa" firstAttribute="top" secondItem="AGw-jc-rBv" secondAttribute="bottom" constant="15" id="u37-Ul-Roc"/>
+                <constraint firstItem="pgP-2a-5xa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="1" id="wwU-tM-cGo"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="221" y="286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg" width="720" height="1230"/>
+        <image name="btn_facebook" width="540" height="92"/>
+        <image name="btn_facebook_on" width="500" height="92"/>
+        <image name="btn_twitter" width="540" height="92"/>
+        <image name="btn_twitter_on" width="500" height="92"/>
+        <image name="logo" width="450" height="450"/>
+    </resources>
+</document>
