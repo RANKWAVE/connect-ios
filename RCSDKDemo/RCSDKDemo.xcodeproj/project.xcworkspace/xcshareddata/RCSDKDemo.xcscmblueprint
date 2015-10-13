@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "fc97b933-0a9f-4c84-9d40-fd49e6f11896++1396",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "fc97b933-0a9f-4c84-9d40-fd49e6f11896++1396" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "fc97b933-0a9f-4c84-9d40-fd49e6f11896++1396" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BCF92A6F-E13C-410F-B1B0-D8976BD3773A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "fc97b933-0a9f-4c84-9d40-fd49e6f11896++1396" : "RCSDKDemo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RCSDKDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RCSDKDemo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/infrasys.cloudapp.net\/SocialRank-Mobile",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "fc97b933-0a9f-4c84-9d40-fd49e6f11896++1396"
+    }
+  ]
+}
