@@ -71,6 +71,15 @@
                                     didFinishLaunchingWithOptions:launchOptions];
 }
 
+-(void)tjcConnectSuccess:(NSNotification*)notifyObj
+{
+    NSLog(@"Tapjoy connect Succeeded");
+}
+-(void)tjcConnectFail:(NSNotification*)notifyObj
+{
+    NSLog(@"Tapjoy connect Failed");
+}
+
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     ///////////////////////////////////////////////////
     // FOR RC SDK

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		97140FFD1BC4E92F00563F60 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97140FFF1BC4E92F00563F60 /* Localizable.strings */; };
-		973DFA921BCABD5F0051D2D5 /* RCSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973DFA911BCABD5F0051D2D5 /* RCSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		973DFA921BCABD5F0051D2D5 /* RCSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973DFA911BCABD5F0051D2D5 /* RCSDKCoreKit.framework */; };
 		973DFA941BCABE570051D2D5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973DFA931BCABE570051D2D5 /* AdSupport.framework */; };
 		973DFA961BCABFC00051D2D5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973DFA951BCABFC00051D2D5 /* CoreTelephony.framework */; };
 		97AD3C5D1BC25B140020289F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD3C5C1BC25B140020289F /* main.m */; };
@@ -16,17 +16,17 @@
 		97AD3C681BC25B140020289F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97AD3C671BC25B140020289F /* Assets.xcassets */; };
 		97AD3C761BC25B140020289F /* RCSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD3C751BC25B140020289F /* RCSDKDemoTests.m */; };
 		97AD3C811BC25B140020289F /* RCSDKDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD3C801BC25B140020289F /* RCSDKDemoUITests.m */; };
-		97AD3C991BC275520020289F /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD3C981BC275520020289F /* Common.m */; settings = {ASSET_TAGS = (); }; };
-		97AD3C9D1BC279F00020289F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD3C9B1BC279F00020289F /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
-		97AD3C9E1BC279F00020289F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97AD3C9C1BC279F00020289F /* LoginViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		97AD3CA21BC27A000020289F /* ServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD3CA01BC27A000020289F /* ServiceViewController.m */; settings = {ASSET_TAGS = (); }; };
-		97AD3CA31BC27A000020289F /* ServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97AD3CA11BC27A000020289F /* ServiceViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		97F1C80C1BC5FEEF00AD2C09 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C8081BC5FEEF00AD2C09 /* Fabric.framework */; settings = {ASSET_TAGS = (); }; };
-		97F1C80D1BC5FEEF00AD2C09 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C8091BC5FEEF00AD2C09 /* TwitterKit.framework */; settings = {ASSET_TAGS = (); }; };
-		97F1C80E1BC5FEEF00AD2C09 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97F1C80A1BC5FEEF00AD2C09 /* TwitterKitResources.bundle */; settings = {ASSET_TAGS = (); }; };
-		97F1C80F1BC5FEEF00AD2C09 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C80B1BC5FEEF00AD2C09 /* TwitterCore.framework */; settings = {ASSET_TAGS = (); }; };
-		97F1C8121BC600BC00AD2C09 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C8101BC600BC00AD2C09 /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
-		97F1C8131BC600BC00AD2C09 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C8111BC600BC00AD2C09 /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
+		97AD3C991BC275520020289F /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD3C981BC275520020289F /* Common.m */; };
+		97AD3C9D1BC279F00020289F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD3C9B1BC279F00020289F /* LoginViewController.m */; };
+		97AD3C9E1BC279F00020289F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97AD3C9C1BC279F00020289F /* LoginViewController.xib */; };
+		97AD3CA21BC27A000020289F /* ServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD3CA01BC27A000020289F /* ServiceViewController.m */; };
+		97AD3CA31BC27A000020289F /* ServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97AD3CA11BC27A000020289F /* ServiceViewController.xib */; };
+		97F1C80C1BC5FEEF00AD2C09 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C8081BC5FEEF00AD2C09 /* Fabric.framework */; };
+		97F1C80D1BC5FEEF00AD2C09 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C8091BC5FEEF00AD2C09 /* TwitterKit.framework */; };
+		97F1C80E1BC5FEEF00AD2C09 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 97F1C80A1BC5FEEF00AD2C09 /* TwitterKitResources.bundle */; };
+		97F1C80F1BC5FEEF00AD2C09 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C80B1BC5FEEF00AD2C09 /* TwitterCore.framework */; };
+		97F1C8121BC600BC00AD2C09 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C8101BC600BC00AD2C09 /* FBSDKCoreKit.framework */; };
+		97F1C8131BC600BC00AD2C09 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F1C8111BC600BC00AD2C09 /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -490,6 +490,7 @@
 					"$(PROJECT_DIR)/RCSDKDemo/FacebookSDKs",
 					"$(PROJECT_DIR)/RCSDKDemo/RankcloudSDKs",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RCSDKDemo/Tapjoy.embeddedframework",
 				);
 				INFOPLIST_FILE = RCSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -512,6 +513,7 @@
 					"$(PROJECT_DIR)/RCSDKDemo/FacebookSDKs",
 					"$(PROJECT_DIR)/RCSDKDemo/RankcloudSDKs",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RCSDKDemo/Tapjoy.embeddedframework",
 				);
 				INFOPLIST_FILE = RCSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -619,6 +621,7 @@
 					"$(PROJECT_DIR)/RCSDKDemo/FacebookSDKs",
 					"$(PROJECT_DIR)/RCSDKDemo/RankcloudSDKs",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RCSDKDemo/Tapjoy.embeddedframework",
 				);
 				INFOPLIST_FILE = RCSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;

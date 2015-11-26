@@ -3,8 +3,7 @@
 
 
 #import <Foundation/Foundation.h>
-
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 #ifndef _RES_BLOCK_DEFINED
 #define _RES_BLOCK_DEFINED
@@ -34,4 +33,25 @@ typedef void (^ResponseBlock)(NSString *response, NSError *error);
 
 #pragma mark App state
 - (void) activateApp:(BOOL)flag;
+
+#pragma mark Popup
+/*
+{
+    // Unique key for managing popup windows.
+    // This value can be empty or skipped while warranting single popup concurrently.
+    "seq" : "xxxxxxxxxxxx",
+    
+    "title" : "This is popup title",
+    
+    "alert" : "This is alert message.\nYou can write multi-line text.",
+    
+    // If you set this value, Go button for current url will be shown.
+    "open_url" : "http://www.rankwave.com",
+    
+    // If you set this value, image will be shown.
+    "image_url" : "http://www.rankwave.com/xxxxxx.jpg"
+}
+*/
+- (void) showPopup:(NSDictionary *)info;
+
 @end
