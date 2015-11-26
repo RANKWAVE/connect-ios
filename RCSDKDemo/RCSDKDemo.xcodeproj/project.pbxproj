@@ -490,7 +490,6 @@
 					"$(PROJECT_DIR)/RCSDKDemo/FacebookSDKs",
 					"$(PROJECT_DIR)/RCSDKDemo/RankcloudSDKs",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/RCSDKDemo/Tapjoy.embeddedframework",
 				);
 				INFOPLIST_FILE = RCSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -513,7 +512,6 @@
 					"$(PROJECT_DIR)/RCSDKDemo/FacebookSDKs",
 					"$(PROJECT_DIR)/RCSDKDemo/RankcloudSDKs",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/RCSDKDemo/Tapjoy.embeddedframework",
 				);
 				INFOPLIST_FILE = RCSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -621,7 +619,6 @@
 					"$(PROJECT_DIR)/RCSDKDemo/FacebookSDKs",
 					"$(PROJECT_DIR)/RCSDKDemo/RankcloudSDKs",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/RCSDKDemo/Tapjoy.embeddedframework",
 				);
 				INFOPLIST_FILE = RCSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
