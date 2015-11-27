@@ -17,6 +17,8 @@
 #import <Fabric/Fabric.h>
 #import <TwitterKit/TwitterKit.h>
 
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
+
 @interface AppDelegate ()
 
 @end
@@ -67,6 +69,11 @@
                                     consumerSecret:@"9ZydYUpC9RaH5DMeUkNkOv07lJcSJbIlpA9lvsdWqLtn891zOf"];
     [Fabric with:@[[Twitter sharedInstance]]];
 
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(kakaoSessionDidChangeWithNotification:)
+                                                 name:KOSessionDidChangeNotification
+                                               object:nil];
+    
     return [[FBSDKApplicationDelegate sharedInstance] application:application
                                     didFinishLaunchingWithOptions:launchOptions];
 }
@@ -106,11 +113,22 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
+    if([KOSession isKakaoAccountLoginCallback:url]) {
+        return [KOSession handleOpenURL:url];
+    }
+    
     return [[FBSDKApplicationDelegate sharedInstance] application:application
                                                           openURL:url
                                                 sourceApplication:sourceApplication
                                                        annotation:annotation
             ];
+}
+
+- (void)kakaoSessionDidChangeWithNotification:(NSNotification *)notification
+{
+    if(![[KOSession sharedSession] isOpen]) {
+        // do something for unauthenticated user
+    }
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
@@ -137,6 +155,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     [FBSDKAppEvents activateApp];
+    [KOSession handleDidBecomeActive];
     [[RCSDK sharedInstance] activateApp:TRUE];
 }
 

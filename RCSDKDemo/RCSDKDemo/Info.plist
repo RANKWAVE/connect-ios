@@ -26,9 +26,17 @@
 				<string>fb180337005493402</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kakao4ed937b8acee961721396c8d517cb2d9</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>234</string>
+	<string>267</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -52,12 +60,20 @@
 	<string>180337005493402</string>
 	<key>FacebookDisplayName</key>
 	<string>Rank-Cloud SDK Demo</string>
+	<key>KAKAO_APP_KEY</key>
+	<string>4ed937b8acee961721396c8d517cb2d9</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
 		<string>fb-messenger-api</string>
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
+		<string>kakao4ed937b8acee961721396c8d517cb2d9</string>
+		<string>kakaokompassauth</string>
+		<string>storykompassauth</string>
+		<string>kakaolink</string>
+		<string>kakaotalk-4.5.0</string>
+		<string>kakaostory-2.9.0</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
@@ -88,6 +104,33 @@
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
+			<key>kakao.co.kr</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>kakao.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+			<key>kakaocdn.net</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
 			<key>rankwave.com</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
@@ -112,9 +155,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 </dict>
 </plist>

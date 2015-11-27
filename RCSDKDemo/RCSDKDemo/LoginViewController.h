@@ -12,5 +12,6 @@
 
 - (IBAction)loginToFacebook:(id)sender;
 - (IBAction)loginToTwitter:(id)sender;
+- (IBAction)loginToKakao:(id)sender;
 
 @end

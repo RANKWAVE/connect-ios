@@ -16,6 +16,8 @@
 #import <Fabric/Fabric.h>
 #import <TwitterKit/TwitterKit.h>
 
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
+
 @interface ServiceViewController ()
 
 @end
@@ -137,6 +139,45 @@
             NSLog(@"Twitter API Error: %@", clientError);
         }
     }
+    else if([sns isEqualToString:@"kakao"]) {
+        NSString *loginID = [Common getLoginIDFromSession];
+        NSString *token = [Common getTokenFromSession];
+        
+        NSString *appendText = @"";
+        
+        appendText = [appendText stringByAppendingString:@"\n---------------------------"];
+        appendText = [appendText stringByAppendingString:@"\n[Current logged-in session]"];
+        appendText = [appendText stringByAppendingString:@"\n---------------------------"];
+        appendText = [appendText stringByAppendingFormat:@"\nSNS = %@", sns];
+        appendText = [appendText stringByAppendingFormat:@"\nID = %@", loginID];
+        appendText = [appendText stringByAppendingFormat:@"\nToken = %@", token];
+        appendText = [appendText stringByAppendingString:@"\n---------------------------\n"];
+        
+        _logText.text = [_logText.text stringByAppendingString:appendText];
+        [_logText scrollRangeToVisible:NSMakeRange([_logText.text length], 0)];
+        
+        [KOSessionTask meTaskWithCompletionHandler:^(KOUser* result, NSError *error) {
+            if(result) {
+                _name.text = [result propertyForKey:@"nickname"];
+                NSString *profileImageURL = [result propertyForKey:@"profile_image"];
+                
+                [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:profileImageURL]]
+                                                   queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                                                       
+                                                       [(NSHTTPURLResponse *)response allHeaderFields];
+                                                       
+                                                       NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+                                                       
+                                                       if(httpResponse.statusCode == 200) {
+                                                           _profileImage.image = [UIImage imageWithData:data];
+                                                       }
+                                                   }];
+            }
+            else {
+                // failed
+            }
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -158,17 +199,31 @@
     // Logout from SNS
     NSString *sns = [Common getSNSFromSession];
     
-    if([sns isEqualToString:@"facebook"]) {
-        FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
-        
-        [login logOut];
-    }
-    else if([sns isEqualToString:@"twitter"]) {
+    if(sns) {
+        if([sns isEqualToString:@"facebook"]) {
+            FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+            
+            [login logOut];
+        }
+        else if([sns isEqualToString:@"twitter"]) {
 
-        TWTRSessionStore *store = [[Twitter sharedInstance] sessionStore];
-        NSString *userID = store.session.userID;
-        
-        [store logOutUserID:userID];
+            TWTRSessionStore *store = [[Twitter sharedInstance] sessionStore];
+            NSString *userID = store.session.userID;
+            
+            [store logOutUserID:userID];
+        }
+        else if([sns isEqualToString:@"kakao"]) {
+            [[KOSession sharedSession] logoutAndCloseWithCompletionHandler:^(BOOL success, NSError *error) {
+                if(success) {
+                    // logout success.
+                    NSLog(@"Succeed to logout from Kakao service.");
+                }
+                else {
+                    // failed
+                    NSLog(@"Failed to logout from Kakao service.");
+                }
+            }];
+        }
     }
     
     ///////////////////////////////////////////////////
@@ -204,16 +259,30 @@
     // Logout from SNS
     NSString *sns = [Common getSNSFromSession];
     
-    if([sns isEqualToString:@"facebook"]) {
-        FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
-        
-        [login logOut];
-    }
-    else if([sns isEqualToString:@"twitter"]) {
-        TWTRSessionStore *store = [[Twitter sharedInstance] sessionStore];
-        NSString *userID = store.session.userID;
-        
-        [store logOutUserID:userID];
+    if(sns) {
+        if([sns isEqualToString:@"facebook"]) {
+            FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+            
+            [login logOut];
+        }
+        else if([sns isEqualToString:@"twitter"]) {
+            TWTRSessionStore *store = [[Twitter sharedInstance] sessionStore];
+            NSString *userID = store.session.userID;
+            
+            [store logOutUserID:userID];
+        }
+        else if([sns isEqualToString:@"kakao"]) {
+            [[KOSession sharedSession] logoutAndCloseWithCompletionHandler:^(BOOL success, NSError *error) {
+                if(success) {
+                    // logout success.
+                    NSLog(@"Succeed to logout from Kakao service.");
+                }
+                else {
+                    // failed
+                    NSLog(@"Failed to logout from Kakao service.");
+                }
+            }];
+        }
     }
     
     ///////////////////////////////////////////////////

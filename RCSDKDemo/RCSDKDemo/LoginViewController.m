@@ -16,6 +16,8 @@
 #import <Fabric/Fabric.h>
 #import <TwitterKit/TwitterKit.h>
 
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
+
 @interface LoginViewController ()
 
 @end
@@ -123,6 +125,50 @@
         }
         else {
             NSLog(@"Twitter Login failed. %@", [error localizedDescription]);
+        }
+    }];
+}
+
+- (IBAction)loginToKakao:(id)sender {
+    // ensure old session was closed
+    [[KOSession sharedSession] close];
+    
+    [[KOSession sharedSession] openWithCompletionHandler:^(NSError *error) {
+        if ([[KOSession sharedSession] isOpen]) {
+            [KOSessionTask meTaskWithCompletionHandler:^(KOUser* result, NSError *error) {
+                if(result) {
+                    // success
+                    NSString *token = [KOSession sharedSession].accessToken;
+                    NSString *userID = [result.ID stringValue];
+                    NSLog(@"Kakao Login succeeded. User ID = %@", result.ID);
+                    
+                    ///////////////////////////////////////////////////
+                    // FOR RC SDK
+                    ///////////////////////////////////////////////////
+                    
+                    [[RCSDK sharedInstance] loginWithKakaoID:userID withToken:token
+                                response:^(NSString *response, NSError *error) {
+                                   if(response) {
+                                       NSLog(@"RANK.CLOUD login with Kakao ID succeeded. %@", response);
+                                   }
+                                   
+                                   if(error) {
+                                       NSLog(@"RANK.CLOUD login with Kakao ID failed. %@", [error localizedDescription]);
+                                   }
+                               }];
+                    
+                    // Save current session.
+                    [Common saveSessionID:result.ID.stringValue withSNS:@"kakao" withToken:token withTokenSecret:nil];
+                    
+                    // Switch to service view controller.
+                    [Common switchView:VIEW_TYPE_SERVICE];
+                }
+                else {
+                    NSLog(@"Kakao Login failed. %@", [error localizedDescription]);
+                }
+            }];
+        } else {
+            NSLog(@"Kakao Login failed. %@", [error localizedDescription]);
         }
     }];
 }

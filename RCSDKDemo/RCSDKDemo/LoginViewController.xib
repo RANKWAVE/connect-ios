@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
@@ -20,20 +20,19 @@
                     <animations/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgP-2a-5xa">
-                    <rect key="frame" x="26" y="339" width="270" height="46"/>
+                    <rect key="frame" x="34" y="269" width="251" height="43"/>
                     <animations/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="46" id="gds-1a-PDI"/>
-                        <constraint firstAttribute="width" constant="270" id="mcu-uk-OMm"/>
+                        <constraint firstAttribute="height" constant="43" id="gds-1a-PDI"/>
+                        <constraint firstAttribute="width" constant="251" id="mcu-uk-OMm"/>
                     </constraints>
-                    <state key="normal" title="Facebook" image="btn_facebook"/>
-                    <state key="highlighted" image="btn_facebook_on"/>
+                    <state key="normal" title="Facebook" image="btn_flogin"/>
                     <connections>
                         <action selector="loginToFacebook:" destination="-1" eventType="touchUpInside" id="910-9G-nny"/>
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="AGw-jc-rBv">
-                    <rect key="frame" x="71" y="144" width="180" height="180"/>
+                    <rect key="frame" x="70" y="40" width="180" height="180"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="180" id="AzE-hh-Eik"/>
@@ -41,16 +40,28 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSp-by-PhD">
-                    <rect key="frame" x="26" y="391" width="270" height="46"/>
+                    <rect key="frame" x="35" y="321" width="251" height="43"/>
                     <animations/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="46" id="1SB-6F-jIW"/>
-                        <constraint firstAttribute="width" constant="270" id="Duq-iW-hve"/>
+                        <constraint firstAttribute="height" constant="43" id="1SB-6F-jIW"/>
+                        <constraint firstAttribute="width" constant="251" id="Duq-iW-hve"/>
                     </constraints>
-                    <state key="normal" title="Twitter" image="btn_twitter"/>
-                    <state key="highlighted" image="btn_twitter_on"/>
+                    <state key="normal" title="Twitter" image="btn_tlogin"/>
                     <connections>
                         <action selector="loginToTwitter:" destination="-1" eventType="touchUpInside" id="35f-p6-95L"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmE-dd-6YR">
+                    <rect key="frame" x="35" y="372" width="251" height="43"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="251" id="ShB-pf-Bpi"/>
+                        <constraint firstAttribute="height" constant="43" id="TQG-zW-lgy"/>
+                    </constraints>
+                    <state key="normal" title="Log in with Kakao" image="kakao_account_login_btn_large_wide"/>
+                    <state key="highlighted" image="kakao_account_login_btn_large_wide_ov"/>
+                    <connections>
+                        <action selector="loginToKakao:" destination="-1" eventType="touchUpInside" id="iJT-k2-DaH"/>
                     </connections>
                 </button>
             </subviews>
@@ -58,27 +69,28 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Xx1-uf-sCz" secondAttribute="trailing" id="ERS-Xo-4qI"/>
-                <constraint firstItem="TSp-by-PhD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="1" id="Gqn-AT-HUl"/>
-                <constraint firstItem="AGw-jc-rBv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="1" id="I7Y-ZE-BXJ"/>
+                <constraint firstItem="TSp-by-PhD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Gqn-AT-HUl"/>
+                <constraint firstItem="AGw-jc-rBv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="I7Y-ZE-BXJ"/>
+                <constraint firstItem="EmE-dd-6YR" firstAttribute="top" secondItem="TSp-by-PhD" secondAttribute="bottom" constant="8" id="Jqk-TS-nSK"/>
                 <constraint firstItem="Xx1-uf-sCz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QSd-3E-cCx"/>
-                <constraint firstItem="AGw-jc-rBv" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-6" id="Rpt-xA-Wsv"/>
-                <constraint firstItem="TSp-by-PhD" firstAttribute="top" secondItem="pgP-2a-5xa" secondAttribute="bottom" constant="6" id="Vjy-SB-mQs"/>
+                <constraint firstItem="AGw-jc-rBv" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-110" id="Rpt-xA-Wsv"/>
+                <constraint firstItem="TSp-by-PhD" firstAttribute="top" secondItem="pgP-2a-5xa" secondAttribute="bottom" constant="9" id="Vjy-SB-mQs"/>
                 <constraint firstAttribute="bottom" secondItem="Xx1-uf-sCz" secondAttribute="bottom" id="ax5-Gt-gO6"/>
+                <constraint firstItem="EmE-dd-6YR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fXz-KE-hxx"/>
                 <constraint firstItem="Xx1-uf-sCz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qzC-El-A9N"/>
-                <constraint firstItem="pgP-2a-5xa" firstAttribute="top" secondItem="AGw-jc-rBv" secondAttribute="bottom" constant="15" id="u37-Ul-Roc"/>
-                <constraint firstItem="pgP-2a-5xa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="1" id="wwU-tM-cGo"/>
+                <constraint firstItem="pgP-2a-5xa" firstAttribute="top" secondItem="AGw-jc-rBv" secondAttribute="bottom" constant="49" id="u37-Ul-Roc"/>
+                <constraint firstItem="pgP-2a-5xa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wwU-tM-cGo"/>
             </constraints>
-            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="221" y="286"/>
         </view>
     </objects>
     <resources>
         <image name="bg" width="720" height="1230"/>
-        <image name="btn_facebook" width="540" height="92"/>
-        <image name="btn_facebook_on" width="500" height="92"/>
-        <image name="btn_twitter" width="540" height="92"/>
-        <image name="btn_twitter_on" width="500" height="92"/>
+        <image name="btn_flogin" width="251" height="43"/>
+        <image name="btn_tlogin" width="251" height="43"/>
+        <image name="kakao_account_login_btn_large_wide" width="600" height="98"/>
+        <image name="kakao_account_login_btn_large_wide_ov" width="600" height="98"/>
         <image name="logo" width="450" height="450"/>
     </resources>
 </document>

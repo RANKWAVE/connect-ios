@@ -11,6 +11,7 @@
 		973DFA921BCABD5F0051D2D5 /* RCSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973DFA911BCABD5F0051D2D5 /* RCSDKCoreKit.framework */; };
 		973DFA941BCABE570051D2D5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973DFA931BCABE570051D2D5 /* AdSupport.framework */; };
 		973DFA961BCABFC00051D2D5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973DFA951BCABFC00051D2D5 /* CoreTelephony.framework */; };
+		97926D401C07035F00A54716 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97926D3F1C07035F00A54716 /* KakaoOpenSDK.framework */; };
 		97AD3C5D1BC25B140020289F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD3C5C1BC25B140020289F /* main.m */; };
 		97AD3C601BC25B140020289F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD3C5F1BC25B140020289F /* AppDelegate.m */; };
 		97AD3C681BC25B140020289F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97AD3C671BC25B140020289F /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		973DFA911BCABD5F0051D2D5 /* RCSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RCSDKCoreKit.framework; path = RCSDKDemo/RankcloudSDKs/RCSDKCoreKit.framework; sourceTree = "<group>"; };
 		973DFA931BCABE570051D2D5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		973DFA951BCABFC00051D2D5 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		97926D3F1C07035F00A54716 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = RCSDKDemo/KakaoSDKs/KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		97AD3C581BC25B140020289F /* RCSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97AD3C5C1BC25B140020289F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		97AD3C5E1BC25B140020289F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				97F1C8131BC600BC00AD2C09 /* FBSDKLoginKit.framework in Frameworks */,
 				97F1C80C1BC5FEEF00AD2C09 /* Fabric.framework in Frameworks */,
 				97F1C80D1BC5FEEF00AD2C09 /* TwitterKit.framework in Frameworks */,
+				97926D401C07035F00A54716 /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +120,7 @@
 		97AD3C4F1BC25B140020289F = {
 			isa = PBXGroup;
 			children = (
+				97926D3F1C07035F00A54716 /* KakaoOpenSDK.framework */,
 				973DFA951BCABFC00051D2D5 /* CoreTelephony.framework */,
 				973DFA931BCABE570051D2D5 /* AdSupport.framework */,
 				973DFA911BCABD5F0051D2D5 /* RCSDKCoreKit.framework */,
@@ -490,10 +494,12 @@
 					"$(PROJECT_DIR)/RCSDKDemo/FacebookSDKs",
 					"$(PROJECT_DIR)/RCSDKDemo/RankcloudSDKs",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RCSDKDemo/KakaoSDKs",
 				);
 				INFOPLIST_FILE = RCSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rankwave.RCSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -512,10 +518,12 @@
 					"$(PROJECT_DIR)/RCSDKDemo/FacebookSDKs",
 					"$(PROJECT_DIR)/RCSDKDemo/RankcloudSDKs",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RCSDKDemo/KakaoSDKs",
 				);
 				INFOPLIST_FILE = RCSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rankwave.RCSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -587,6 +595,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rankwave Co., Ltd (WK7JUYHAMF)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -612,17 +621,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rankwave Co., Ltd (WK7JUYHAMF)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rankwave Co., Ltd (WK7JUYHAMF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RCSDKDemo/FacebookSDKs",
 					"$(PROJECT_DIR)/RCSDKDemo/RankcloudSDKs",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RCSDKDemo/KakaoSDKs",
 				);
 				INFOPLIST_FILE = RCSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rankwave.RCSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
