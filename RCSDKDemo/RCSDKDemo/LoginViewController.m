@@ -121,7 +121,6 @@
             
             // Switch to service view controller.
             [Common switchView:VIEW_TYPE_SERVICE];
-
         }
         else {
             NSLog(@"Twitter Login failed. %@", [error localizedDescription]);
@@ -139,6 +138,8 @@
                 if(result) {
                     // success
                     NSString *token = [KOSession sharedSession].accessToken;
+                    NSString *refreshToken = [KOSession sharedSession].refreshToken;
+                    
                     NSString *userID = [result.ID stringValue];
                     NSLog(@"Kakao Login succeeded. User ID = %@", result.ID);
                     
@@ -146,8 +147,8 @@
                     // FOR RC SDK
                     ///////////////////////////////////////////////////
                     
-                    [[RCSDK sharedInstance] loginWithKakaoID:userID withToken:token
-                                response:^(NSString *response, NSError *error) {
+                    [[RCSDK sharedInstance] loginWithKakaoID:userID withToken:token withRefreshToken:refreshToken
+                            response:^(NSString *response, NSError *error) {
                                    if(response) {
                                        NSLog(@"RANK.CLOUD login with Kakao ID succeeded. %@", response);
                                    }

@@ -22,7 +22,7 @@ typedef void (^ResponseBlock)(NSString *response, NSError *error);
 #pragma mark Login / Logout / Leave
 - (void) loginWithFacebookID:(NSString *)snsID withToken:(NSString *)token response:(ResponseBlock) resBlock;
 - (void) loginWithTwitterID:(NSString *)snsID withToken:(NSString *)token withTokenSecret:(NSString *)secret response:(ResponseBlock)resBlock;
-- (void) loginWithKakaoID:(NSString *)snsID withToken:(NSString *)token response:(ResponseBlock)resBlock;
+- (void) loginWithKakaoID:(NSString *)snsID withToken:(NSString *)token withRefreshToken: (NSString *)refreshToken response:(ResponseBlock)resBlock;
 - (void) loginWithEmail:(NSString *)email response:(ResponseBlock)resBlock;
 - (void) logout:(ResponseBlock)resBlock;
 - (void) leave:(ResponseBlock)resBlock;
