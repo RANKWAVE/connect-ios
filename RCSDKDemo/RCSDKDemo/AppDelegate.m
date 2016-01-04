@@ -55,6 +55,10 @@
     ///////////////////////////////////////////////////
     // FOR RC SDK
     ///////////////////////////////////////////////////
+    
+    // For test, Setting the idle time value to 10 seconds.
+    [[RCSDK sharedInstance] setIdleTime:10];
+    
     [[RCSDK sharedInstance] sdkInitialize:launchOptions response:^(NSString *response, NSError *error) {
         if(response) {
             NSLog(@"SDK initializing succeed.\n%@", response);

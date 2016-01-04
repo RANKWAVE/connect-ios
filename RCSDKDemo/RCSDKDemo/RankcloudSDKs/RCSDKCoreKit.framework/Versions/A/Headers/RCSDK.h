@@ -34,6 +34,7 @@ typedef void (^ResponseBlock)(NSString *response, NSError *error);
 
 #pragma mark App state
 - (void) activateApp:(BOOL)flag;
+- (void) setIdleTime:(double)seconds;
 
 #pragma mark Popup
 /*
